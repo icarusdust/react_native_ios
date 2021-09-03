@@ -5,7 +5,7 @@ workflows:
         instance_type: mac_mini
         environment:
             vars:
-                XCODE_WORKSPACE: "react_native_ios.xcworkspace" # <-- Put the name of your Xcode workspace here
+                XCODE_WORKSPACE: "ios/react_native_ios.xcworkspace" # <-- Put the name of your Xcode workspace here
                 XCODE_SCHEME: "react_native_ios" # <-- Put the name of your Xcode scheme here
             node: latest
             xcode: 12.5
