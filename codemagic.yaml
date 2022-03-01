@@ -11,9 +11,13 @@ workflows:
             xcode: 12.5
             cocoapods: default
         scripts:
+     
             - name: Install npm dependencies
               script: |
                 npm install
+            - name: Deintegrate
+              script: | 
+                rm -rf ~/Library/Caches/CocoaPods Pods ~/Library/Developer/Xcode/DerivedData && pod deintegrate && pod install
             - name: Install CocoaPods dependencies
               script: |
                 cd ios && pod install
