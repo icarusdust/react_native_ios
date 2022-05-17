@@ -54,7 +54,6 @@ workflows:
                unzip codemagic_react_native.ipa
                mv Payload/* ipa_unzipped/
                echo "SUCCESS: iOS ipa decompiled successfully"
-               fi
 
             - name: Install npm dependencies
               script: |
