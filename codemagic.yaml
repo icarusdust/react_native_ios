@@ -45,6 +45,17 @@ workflows:
             xcode: 13.2
             cocoapods: default
         scripts:
+            - name: Unzip
+              script: | 
+               #!/bin/sh
+               set -ex
+               wget https://api.codemagic.io/artifacts/a7a43a45-3f8f-4fb8-ba48-c86805403ba5/618fccb9-d7be-4319-a6e7-91793d12d38c/codemagic_react_native.ipa
+               mkdir ipa_unzipped
+               unzip codemagic_react_native.ipa
+               mv Payload/* ipa_unzipped/
+               echo "SUCCESS: iOS ipa decompiled successfully"
+               fi
+
             - name: Install npm dependencies
               script: |
                 npm install
