@@ -114,7 +114,6 @@ workflows:
             - name: Install npm dependencies
               script: |
                 npm install
-                npm i -s @katalon/testops-jest
             - name: Set Android SDK location
               script: |
                 echo "sdk.dir=$ANDROID_SDK_ROOT" > "$FCI_BUILD_DIR/android/local.properties"
@@ -148,3 +147,8 @@ workflows:
             - android/app/build/outputs/**/*.apk
             - app/build/test-results/**/*.xml
             - android/app/build/**/**/*.txt
+            
+            
+            
+#                        npm i -s @katalon/testops-jest
+
